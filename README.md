@@ -1,2 +1,2 @@
-# erratum-generator
+# erratx-generator
 an erratum generator
