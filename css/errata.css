@@ -22,6 +22,23 @@ body {
 	width: 80%;
 }
 
+.def {
+	position: relative;
+	font-size: 2em;
+	line-height: 1.2;
+	color: darkgray;
+	font-style: italic;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+}
+
+.bold {
+	font-style: bold;
+	color: slategray;
+}
+
 .button {
 	border: 1px dotted black;
 	text-align: center;
@@ -30,7 +47,7 @@ body {
 	font-weight: bold;
 	padding: .5em;
 	position: relative;
-	top: 10%;
+	top: 15%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 50%;
