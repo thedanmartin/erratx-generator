@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 
-		<!-- CSS Files -->
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/errata.css" />
 
-		<!-- All Javascript/jQuery Files-->
-	
-		<!-- Title of your web page -->	
 		<title>Erratx Generator</title>
 	
 	</head>
 
 	<body>
 
-		<div class="button">generate errata</div>
-
 		<div class="container">
+			<div class="button">generate erratx</div>
+			<h1 class="title"></h1>
 			<p class="text">
 				<span class="one"></span>
 				<span class="two"></span>
@@ -27,9 +23,12 @@
 				<span class="five"></span>
 				<span class="six"></span>
 			</p>
+			<footer><a href="http://danmartin.net/">danmartin.net</a></footer>
 		</div>
 
-		<script>document.addEventListener("DOMContentLoaded", () => {
+	<script>document.addEventListener("DOMContentLoaded", () => {
+	
+		const title = ["Corrigendum", "Erratum", "Erratum.", "Erratum—", "ERRATUM", "ERRATUM.", "ERRATUM—"];
 		const one = ["In a recent paper", "In last month’s issue", "In a previous edition"];
 		const two = ["a statement was misconstrued,", "a sentence was inadvertently set incorrectly,", "a misprint occurs,", "the author was improperly featured in the list of contributors,", "the image of the figure was incorrect,", "because of an editing error, several estimates are incorrectly presented as positive,", "there is a typographical error,", "the prizes were the 1992 prizes, not the 1991 prizes,", "the legends for figures are incorrect,"];
 		const three = ["this must have been upsetting.", "we acknowledge the embarassment that resulted.", "obviously this was hurtful."];
@@ -37,21 +36,22 @@
 		const five = ["We deeply regret this error and extend our heartfelt apologies.", "Our sincere apologies.", "The editors take full responsibility for the error by which the manuscript suffered this transformation."];
 		const six = ["Hopefully, we can move beyond this regrettable oversight.", "The Reader will note and correct this error.", "In the future, we will do better"];
 
-	const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+		const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-	document.querySelectorAll(".button").forEach(button => {
-		button.addEventListener("click", () => {
-			document.querySelectorAll(".one").forEach(el => el.innerHTML = getRandomItem(one));
-			document.querySelectorAll(".two").forEach(el => el.innerHTML = getRandomItem(two));
-			document.querySelectorAll(".three").forEach(el => el.innerHTML = getRandomItem(three));
-			document.querySelectorAll(".four").forEach(el => el.innerHTML = getRandomItem(four));
-			document.querySelectorAll(".five").forEach(el => el.innerHTML = getRandomItem(five));
-			document.querySelectorAll(".six").forEach(el => el.innerHTML = getRandomItem(six));
+		document.querySelectorAll(".button").forEach(button => {
+			button.addEventListener("click", () => {
+				document.querySelectorAll(".title").forEach(el => el.innerHTML = getRandomItem(title));
+				document.querySelectorAll(".one").forEach(el => el.innerHTML = getRandomItem(one));
+				document.querySelectorAll(".two").forEach(el => el.innerHTML = getRandomItem(two));
+				document.querySelectorAll(".three").forEach(el => el.innerHTML = getRandomItem(three));
+				document.querySelectorAll(".four").forEach(el => el.innerHTML = getRandomItem(four));
+				document.querySelectorAll(".five").forEach(el => el.innerHTML = getRandomItem(five));
+				document.querySelectorAll(".six").forEach(el => el.innerHTML = getRandomItem(six));
+			});
 		});
 	});
-});
-</script>
+	</script>
 
-	</body>
+</body>
 
 </html>
