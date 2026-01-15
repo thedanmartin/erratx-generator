@@ -93,25 +93,11 @@ a:active {
 	color: tomato;
 }
 
-@media (min-width: 401px) {
-	
+@media (min-width: 440px) {
+
 	.container {
 		max-width: 960px;
 		margin: 0 auto;
-		width: 85vw;
-	}
-
-	.text {
-		position: relative;
-		font-size: 1em;
-		top: 25%;
-		left: 50%;
-		width: 50%;
-	}
-
-	.title {
-		font-size: 1.2em;
-		width: 50%;
 	}
 
 	.button {
@@ -120,11 +106,17 @@ a:active {
 
 	.def {
 		font-size: 1em;
-		line-height: 1.2;
-		top: 10%;
-		left: 50%;
-		width: 80%;
+		top: 7%;
+	}
+
+	.title {
+		font-size: 1.4em;
+		width: 50%;
+	}
+
+	.text {
+		font-size: 1em;
+		width: 50%;
 	}
 
 }
-
