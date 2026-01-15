@@ -92,3 +92,39 @@ a:hover {
 a:active {
 	color: tomato;
 }
+
+@media (min-width: 401px) {
+	
+	.container {
+		max-width: 960px;
+		margin: 0 auto;
+		width: 85vw;
+	}
+
+	.text {
+		position: relative;
+		font-size: 1em;
+		top: 25%;
+		left: 50%;
+		width: 50%;
+	}
+
+	.title {
+		font-size: 1.2em;
+		width: 50%;
+	}
+
+	.button {
+		font-size: 2em;
+	}
+
+	.def {
+		font-size: 1em;
+		line-height: 1.2;
+		top: 10%;
+		left: 50%;
+		width: 80%;
+	}
+
+}
+
