@@ -11,7 +11,7 @@ body {
 .text {
 	margin: 2em 0 0 0;
 	position: relative;
-	font-size: 2.5em;
+	font-size: 1em;
 	line-height: 1.4;
 	top: 30%;
 	left: 50%;
@@ -21,7 +21,7 @@ body {
 
 .def {
 	position: relative;
-	font-size: 2em;
+	font-size: .8em;
 	line-height: 1.2;
 	color: darkgray;
 	font-style: italic;
@@ -41,7 +41,7 @@ body {
 	border-radius: .5em;
 	text-align: center;
 	letter-spacing: .09em;
-	font-size: 3em;
+	font-size: 1.4em;
 	font-weight: bold;
 	padding: .5em;
 	position: relative;
@@ -63,7 +63,7 @@ body {
 
 .title {
 	position: relative;
-	font-size: 2.5em;
+	font-size: 1em;
 	line-height: 1.4;
 	top: 20%;
 	left: 50%;
@@ -73,10 +73,11 @@ body {
 }
 
 footer {
-	position: absolute;
+	position: relative;
 	bottom: 5%;
-	left: 50%;
+	right: 50%;
 	transform: translate(-50%, -50%);
+	font-size: .5em;
 }
 
 a {
@@ -96,7 +97,7 @@ a:active {
 @media (min-width: 440px) {
 
 	.container {
-		max-width: 960px;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
@@ -115,7 +116,7 @@ a:active {
 	}
 
 	.text {
-		font-size: 1em;
+		top: 22%;
 		width: 50%;
 	}
 
