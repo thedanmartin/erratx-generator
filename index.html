@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
+<head>
+    <title>Erratx Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/errata.css">
 
-		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/errata.css" />
+</head>
 
-		<title>Erratx Generator</title>
-	
-	</head>
+<body>
 
-	<body>
+    <div class="container">
 
-		<div class="container">
-			<p class="def"><span class="bold">er·ra·tum</span><span>/eˈrädəm/</span><br>
-							(noun) an error in printing or writing</p>						    
-			<div class="button">generate erratx</div>
-			<h1 class="title"></h1>
-			<p class="text">
+        <p class="def">
+            <span class="bold">er·ra·tum</span><span>/eˈrädəm/</span><br>
+							    (noun) an error in printing or writing
+        </p>
+
+        <div class="buttondiv"><button class="button">generate erratx</button></div>
+
+        <h1 class="title"></h1>
+
+        <p class="text">
 				<span class="one"></span>
 				<span class="two"></span>
 				<span class="three"></span>
 				<span class="four"></span>
 				<span class="five"></span>
 				<span class="six"></span>
-			</p>
-			<footer><a href="http://danmartin.net/">danmartin.net</a></footer>
-		</div>
+		</p>
 
-	<script>document.addEventListener("DOMContentLoaded", () => {
-	
-		const title = ["Corrigendum", "Erratum", "Erratum.", "Erratum—", "ERRATUM", "ERRATUM.", "ERRATUM—"];
-		const one = ["In a recent paper", "In last month’s issue", "In a previous edition"];
-		const two = ["a statement was misconstrued.", "a sentence was inadvertently set incorrectly.", "a misprint occurs.", "the author was improperly featured in the list of contributors.", "the image of the figure was incorrect.", "because of an editing error, several estimates are incorrectly presented as positive.", "there is a typographical error.", "the legends for figures are incorrect.", "a line was misplaced.", "an author's acknowledgement was inadvertently omitted.", "an accidental exchange of figures occurred.", "a figure was published with an incorrect scale bar.", "errors have been detected.", "a mistake occurred in the pagination so that both issues began on page 169." ];
-		const three = ["This must have been upsetting.", "We acknowledge the embarassment that resulted.", "Obviously this was hurtful.", "There is no sufficent excuse for this."];
-		const four = ["The publisher apologizes for the error.", "Responsibility for this unfortunate error rests with the editorial office.", "The journal apologizes for any confusion this may have caused."];
-		const five = ["The Press regrets the error.", "The editors extend apologies.", "Both the reviewer and the editor deeply regret the error.", "We deeply regret this error and extend our heartfelt apologies.", "Our sincere apologies.", "The editors take full responsibility.", "The journal appreciates the author's contributions to the preparation of this article and regrets the error.", "We apologize for any inconvenience that this error has caused the authors and our readers."];
-		const six = ["Hopefully, we can move beyond this regrettable oversight.", "The Reader will note and correct this error.", "In the future, we will do better.", "We are grateful for the opportunity to correct this error.", "Readers are begged to correct their copies accordingly."];
+        <footer><a href="http://danmartin.net/">danmartin.net</a></footer>
 
-		const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    </div>
 
-		document.querySelectorAll(".button").forEach(button => {
-			button.addEventListener("click", () => {
-				document.querySelectorAll(".title").forEach(el => el.innerHTML = getRandomItem(title));
-				document.querySelectorAll(".one").forEach(el => el.innerHTML = getRandomItem(one));
-				document.querySelectorAll(".two").forEach(el => el.innerHTML = getRandomItem(two));
-				document.querySelectorAll(".three").forEach(el => el.innerHTML = getRandomItem(three));
-				document.querySelectorAll(".four").forEach(el => el.innerHTML = getRandomItem(four));
-				document.querySelectorAll(".five").forEach(el => el.innerHTML = getRandomItem(five));
-				document.querySelectorAll(".six").forEach(el => el.innerHTML = getRandomItem(six));
-			});
-		});
-	});
-	</script>
+<script>document.addEventListener("DOMContentLoaded", () => {
+
+    const title = ["Corrigendum", "Erratum", "Erratum.", "Erratum—", "ERRATUM", "ERRATUM.", "ERRATUM—"];
+    const one = ["In a recent paper", "In last month’s issue", "In a previous edition"];
+    const two = ["a statement was misconstrued.", "a sentence was inadvertently set incorrectly.", "a misprint occurs.", "the author was improperly featured in the list of contributors.", "the image of the figure was incorrect.", "because of an editing error, several estimates are incorrectly presented as positive.", "there is a typographical error.", "the legends for figures are incorrect.", "a line was misplaced.", "an author's acknowledgement was inadvertently omitted.", "an accidental exchange of figures occurred.", "a figure was published with an incorrect scale bar.", "errors have been detected.", "a mistake occurred in the pagination so that both issues began on page 169." ];
+    const three = ["This must have been upsetting.", "We acknowledge the embarassment that resulted.", "Obviously this was hurtful.", "There is no sufficent excuse for this."];
+    const four = ["The publisher apologizes for the error.", "Responsibility for this unfortunate error rests with the editorial office.", "The journal apologizes for any confusion this may have caused."];
+    const five = ["The Press regrets the error.", "The editors extend apologies.", "Both the reviewer and the editor deeply regret the error.", "We deeply regret this error and extend our heartfelt apologies.", "Our sincere apologies.", "The editors take full responsibility.", "The journal appreciates the author's contributions to the preparation of this article and regrets the error.", "We apologize for any inconvenience that this error has caused the authors and our readers."];
+    const six = ["Hopefully, we can move beyond this regrettable oversight.", "The Reader will note and correct this error.", "In the future, we will do better.", "We are grateful for the opportunity to correct this error.", "Readers are begged to correct their copies accordingly."];
+
+    const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+    document.querySelectorAll(".button").forEach(button => {
+        button.addEventListener("click", () => {
+            document.querySelectorAll(".title").forEach(el => el.innerHTML = getRandomItem(title));
+            document.querySelectorAll(".one").forEach(el => el.innerHTML = getRandomItem(one));
+            document.querySelectorAll(".two").forEach(el => el.innerHTML = getRandomItem(two));
+            document.querySelectorAll(".three").forEach(el => el.innerHTML = getRandomItem(three));
+            document.querySelectorAll(".four").forEach(el => el.innerHTML = getRandomItem(four));
+            document.querySelectorAll(".five").forEach(el => el.innerHTML = getRandomItem(five));
+            document.querySelectorAll(".six").forEach(el => el.innerHTML = getRandomItem(six));
+        });
+    });
+});
+</script>
 
 </body>
-
 </html>
