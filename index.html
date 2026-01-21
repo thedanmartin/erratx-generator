@@ -19,7 +19,7 @@
     </p>
 
     <div class="user-inputs">
-        <label>Enter a name: <input type="text" id="username" placeholder="name"></label><br>
+        name: <input type="text" id="username" placeholder="name"></label><br>
         <label>Enter a date: <input type="text" id="date" placeholder="date"></label><br>
         <label>Enter a journal name: <input type="text" id="journal" placeholder="journal name"></label>
     </div>
@@ -30,7 +30,6 @@
 
     <p class="text">
         <span class="intro"></span>
-        <!-- <span class="one"></span> -->
         <span class="two"></span>
         <span class="three"></span>
         <span class="four"></span>
@@ -45,7 +44,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const title = ["Corrigendum", "Erratum", "Erratum.", "Erratum—", "Erratum:", "ERRATUM", "ERRATUM.", "ERRATUM—", "ERRATUM:"];
-    // const one = ["In a recent paper,", "In last month’s issue,", "In a previous edition,", "In the last installment of the journal,"];
     const two = ["A statement was misconstrued.", "A sentence was inadvertently set incorrectly.", "A misprint occurs.", "The author was improperly featured in the list of contributors.", "The image of the figure was incorrect.", "Several estimates are incorrectly presented as positive.", "There is a typographical mistake.", "The legends for figures are incorrect.", "A line was misplaced.", "An author's acknowledgement was inadvertently omitted.", "An accidental exchange of figures occurred.", "A figure was published with an incorrect scale bar.", "A misunderstanding has led to a a serious mistake.", "A mistake occurred in the pagination so that both previous issues began on page 169.", "The prizes listed were the 1992 prizes, not the 1991 prizes.", "The note of acknowledgement was inadvertently omitted.", "The article was incorrectly titled due to a typist error in the last stages of production."];
     const three = ["The publisher recognizes the seriouness of this situation.", "Responsibility for this unfortunate mistake rests with the editorial office.", "The journal acknowledges the confusion this may have caused.", "We were surprised and disappointed to discover that this piece led us to inadvertently act in contradiction to our own editorial policy.", "Through a slip of the pen, the editor introduced the flaw."];
     const four = ["Your editor asks forgiveness.", "The Press regrets the error.", "The editors extend apologies.", "Both the reviewer and the editor deeply regret the error.", "We deeply regret this error and extend our heartfelt apologies.", "Our sincere apologies.", "The editors take full responsibility.", "The journal appreciates the author's contributions to the preparation of this article and regrets the error.", "We apologize for any inconvenience that this error has caused the authors and our readers.", "An error was made in the editorial office, we apologize to all authors concerned."];
@@ -62,10 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const introSentence =
             `In the ${date} issue of ${journal}, the paper by ${name} contained errors. `;
 
-        document.querySelector(".title").innerHTML = getRandomItem(title);
-        document.querySelector(".intro").innerHTML = introSentence;
+        const titleEl = document.querySelector(".title");
+        titleEl.innerHTML = getRandomItem(title);
 
-        // document.querySelector(".one").innerHTML = getRandomItem(one);
+        const cellWidth = titleEl.parentElement.offsetWidth;
+        const maxShift = cellWidth / 2;
+        const randomShift = Math.random() * maxShift;
+        titleEl.style.left = `${randomShift}px`;
+
+        document.querySelector(".intro").innerHTML = introSentence;
         document.querySelector(".two").innerHTML = getRandomItem(two);
         document.querySelector(".three").innerHTML = getRandomItem(three);
         document.querySelector(".four").innerHTML = getRandomItem(four);
