@@ -1,3 +1,4 @@
+
 html {
     box-sizing:border-box;
 }
@@ -7,8 +8,8 @@ html {
 }
 
 body {
-	font-family: Georgia, serif;
-	background-color: seashell;
+    font-family: Georgia, serif;
+    background-color: seashell;
 }
 
 .container {
@@ -16,16 +17,16 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr .1fr 2fr 1fr;
     grid-gap: 0;
-	width: 100vw;
-	height: 100vh;
+    width: 100vw;
+    height: 100vh;
     margin: 0 auto;
 }
 
 .def {
-	font-size: .8rem;
-	line-height: 1.2;
-	color: darkgray;
-	font-style: italic;
+    font-size: .8rem;
+    line-height: 1.2;
+    color: darkgray;
+    font-style: italic;
     align-self: center;
     justify-self: center;
 }
@@ -66,9 +67,12 @@ body {
     background-color: tomato;
 }
 
-h1 {
+h1.title {
     align-self: end;
     margin-left: 1rem;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease;
 }
 
 .text {
